@@ -3,10 +3,10 @@ const morgan = require("morgan");
 const mongoose = require("mongoose");
 const app = express();
 const PORT = 3000;
-
+const cors = require("cors");
 app.use(express.json());
 app.use(morgan("dev"));
-
+app.use(cors());
 mongoose
   .connect(
     "mongodb+srv://grupo:grupo@servidorprueba.ygegryf.mongodb.net/netflix",
